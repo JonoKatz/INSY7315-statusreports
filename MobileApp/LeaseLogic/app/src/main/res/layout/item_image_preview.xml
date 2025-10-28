@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:layout_margin="6dp">
+
+    <!-- Thumbnail image -->
+    <ImageView
+        android:id="@+id/imgPreviewThumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_border"
+        android:contentDescription="Selected Image" />
+
+    <!-- Remove (X) button -->
+    <ImageView
+        android:id="@+id/btnRemoveImage"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="4dp"
+        android:background="@drawable/rounded_bg_transparent"
+        android:padding="5dp"
+        android:src="@drawable/ic_close"
+        app:tint="@android:color/white" />
+
+</FrameLayout>

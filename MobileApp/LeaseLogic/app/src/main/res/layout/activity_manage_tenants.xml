@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🔹 Main content container -->
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarManageTenants"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue_500"
+            app:title="Manage Tenants"
+            app:titleTextColor="@color/white" />
+
+        <!-- Filter Dropdown -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="12dp">
+
+            <TextView
+                android:text="Filter by Status"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/dropdownFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Status"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_border"
+                android:inputType="none"
+                android:drawablePadding="8dp" />
+        </LinearLayout>
+
+        <!-- No Tenants Message -->
+        <TextView
+            android:id="@+id/txtNoTenants"
+            android:text="No tenants found"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Tenant List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTenants"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp" />
+
+        <!-- Back Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            android:text="Back"
+            android:textColor="@color/white"
+            app:cornerRadius="25dp"
+            app:strokeColor="@color/blue_500"
+            app:strokeWidth="2dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- 🔹 Centered Loading Spinner -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Widget.AppCompat.ProgressBar" />
+
+</RelativeLayout>

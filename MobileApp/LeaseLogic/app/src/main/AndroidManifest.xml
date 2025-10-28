@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LeaseLogic"
+        tools:targetApi="34">
+
+        <!-- Launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LeaseLogic">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Settings -->
+        <activity android:name=".tenant.TenantSettingsActivity"
+            android:exported="false" />
+        <activity android:name=".landlord.LandlordSettingsActivity"
+            android:exported="false" />
+
+        <activity android:name=".landlord.AddPropertyActivity" android:exported="false" />
+
+        <activity android:name=".landlord.PropertyDetailsActivity" android:exported="false" />
+
+        <activity android:name=".landlord.EditPropertyActivity" android:exported="false" />
+
+        <activity android:name=".ui.SuccessAnimationActivity" android:exported="false" />
+
+        <activity android:name=".landlord.LandlordTrashActivity" android:exported="false" />
+
+        <activity android:name=".landlord.LandlordDashboardActivity" android:exported="false" />
+
+        <activity android:name=".landlord.ManagePropertiesActivity" android:exported="false" />
+        <activity android:name=".landlord.ManageTenantsActivity" android:exported="false" />
+        <activity android:name=".landlord.ReportsActivity" android:exported="false" />
+
+        <activity
+            android:name=".landlord.TenantRequestsActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".landlord.MaintenanceRequestsActivity"
+            android:exported="false" />
+
+
+
+
+
+        <!-- Authentication -->
+        <activity android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity android:name=".auth.RegisterActivity"
+            android:exported="false" />
+        <activity android:name=".auth.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <!-- Tenant & Landlord Dashboards -->
+        <activity android:name=".tenant.TenantHomeActivity"
+            android:exported="false" />
+        <activity android:name=".tenant.TenantMaintenanceRequestActivity"
+            android:exported="false" />
+
+        <!-- AI Assistant / Future features -->
+        <activity android:name=".assistant.ChatbotActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

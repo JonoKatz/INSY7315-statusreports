@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057711032269",
+    "project_id": "leaselogic-e0fd5",
+    "storage_bucket": "leaselogic-e0fd5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057711032269:android:62dbccb9a20bdb24236684",
+        "android_client_info": {
+          "package_name": "com.vcsd.leaselogic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiUjP0ZqdhcDCBQ4lsNM5UUhE-GAp_jOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

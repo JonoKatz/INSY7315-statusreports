@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Total Properties -->
+    <include layout="@layout/item_report_stat" android:id="@+id/statProperties" />
+
+    <!-- Total Rent -->
+    <include layout="@layout/item_report_stat" android:id="@+id/statRent" />
+
+    <!-- Vacancy -->
+    <include layout="@layout/item_report_stat" android:id="@+id/statVacancy" />
+</LinearLayout>
