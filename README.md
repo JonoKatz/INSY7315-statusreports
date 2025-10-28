@@ -1,58 +1,79 @@
-LeaseLogic Web Application
+# LeaseLogic Web Application
 
 LeaseLogic is an ASP.NET Core MVC web application for managing rental properties, tenants, and maintenance requests. It uses Firebase Firestore as a backend and provides dashboards, tenant management, property management, and maintenance tracking.
 
-Features
+# Features
 
-Dashboard
+## Dashboard
+- View total properties, occupied properties, total rent, and pending maintenance requests.
+- Charts for property overview and income trends.
 
-View total properties, occupied properties, total rent, and pending maintenance requests.
+## Property Management
+- Add, view, edit, and delete properties.
+- Upload property images.
+- View property details.
 
-Charts for property overview and income trends.
+## Tenant Management
+- List tenants.
+- Filter tenants by status (Active / Inactive).
+- View tenant contact information and profile picture.
 
-Property Management
+## Maintenance Requests
+- List maintenance requests.
+- Filter by status: Pending, In Progress, Completed.
+- View details such as property, tenant, description, reported date, and fixed date.
 
-Add, view, edit, and delete properties.
+## Reports
+- Generate reports for properties, tenants, and maintenance statistics.
 
-Upload property images.
+# Technologies Used
+- ASP.NET Core MVC (.NET 8)
+- Firebase Firestore (Google.Cloud.Firestore)
+- Razor Pages for views
+- Bootstrap 5 and custom CSS
+- Azure Functions (optional backend automation)
+- Android app integration (Kotlin module)
 
-View property details.
+# Setup Instructions
 
-Tenant Management
+## Prerequisites
+- .NET 8 SDK
+- Visual Studio 2022 or later
+- Firebase project with Firestore enabled
+- Google Cloud SDK credentials JSON file
 
-List tenants.
+## Steps
+1. Clone the repository:
 
-Filter tenants by status (Active / Inactive).
+git clone https://github.com/yourusername/LeaseLogic.git
 
-View tenant contact information and profile picture.
 
-Maintenance Requests
+cd LeaseLogic
 
-List maintenance requests.
 
-Filter by status: Pending, In Progress, Completed.
+2. Configure Firebase:
+- Place your Firebase credentials JSON file in the project.
+- Update `FirebaseConnector.cs` with the credentials path:
+  ```
+  var builder = new FirestoreDbBuilder
+  {
+      ProjectId = "your-project-id",
+      Credential = GoogleCredential.FromFile("path/to/credentials.json")
+  };
+  ```
 
-View details such as property, tenant, description, reported date, and fixed date.
+3. Restore NuGet packages:
 
-Reports
+dotnet restore
 
-Generate reports for properties, tenants, and maintenance statistics.
 
-Technologies Used
+4. Build the project:
 
-ASP.NET Core MVC (.NET 8)
+dotnet build
 
-Firebase Firestore (Google.Cloud.Firestore)
 
-Razor Pages for views
+5. Run the project:
 
-Bootstrap 5 and custom CSS
+dotnet run
 
-Azure Functions (optional backend automation)
-
-Android app integration (Kotlin module)
-
-Setup Instructions
-Prerequisites
-
-.NET 8 SDK
+Access the application at `https://localhost:5001/` or `http://localhost:5000/`.
