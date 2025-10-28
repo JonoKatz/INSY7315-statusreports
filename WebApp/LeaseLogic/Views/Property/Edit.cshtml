@@ -1,0 +1,65 @@
+﻿@model LeaseLogic.Models.PropertyModel
+@{
+    ViewData["Title"] = "Edit Property";
+}
+
+<div class="container mt-5" style="max-width: 700px; font-family: Arial, sans-serif;">
+    <h2 class="mb-4" style="color:#142943;">Edit Property</h2>
+
+    <form asp-action="Edit" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Property Name</label>
+            <input asp-for="Name" class="form-control" required/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Price" class="form-label">Price (R)</label>
+            <input asp-for="Price" type="number" step="1" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Units" class="form-label">Units</label>
+            <input asp-for="Units" type="number" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Occupancy" class="form-label">Occupancy (%)</label>
+            <input asp-for="Occupancy" type="number" step="0.01" class="form-control"/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Size" class="form-label">Size</label>
+            <input asp-for="Size" class="form-control" required/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Location" class="form-label">Location</label>
+            <input asp-for="Location" class="form-control" required/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Description (optional)</label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Image URLs (optional, comma-separated)</label>
+            <input name="imageUrlsInput" value="@string.Join(", ", Model.ImageUrls ?? new List<string>())" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Status" class="form-label">Status</label>
+            <select asp-for="Status" class="form-select">
+                <option value="Available" selected="@(Model.Status == "Available")">Available</option>
+                <option value="Occupied" selected="@(Model.Status == "Occupied")">Occupied</option>
+                <option value="Pending" selected="@(Model.Status == "Pending")">Pending</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn text-white" style="background-color:#2572ad;">Save Changes</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>

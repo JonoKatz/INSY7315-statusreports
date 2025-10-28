@@ -1,0 +1,74 @@
+﻿@model LeaseLogic.Models.PropertyModel
+@{
+    ViewData["Title"] = "View Property";
+}
+
+<div class="container mt-5" style="font-family: Arial, sans-serif; max-width: 800px;">
+    <h2 class="mb-4" style="color:#142943;">@Model.Name</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            @if (Model.ImageUrls != null && Model.ImageUrls.Any())
+            {
+                <img src="@Model.ImageUrls.First()" alt="Property Image"
+                     class="img-fluid rounded mb-3" style="object-fit:cover; width:100%; height:300px;" />
+            }
+            else
+            {
+                <div style="width:100%; height:300px; background-color:#eee; display:flex; align-items:center; justify-content:center; border-radius:8px;">
+                    <span style="color:#888;">No Image</span>
+                </div>
+            }
+        </div>
+
+        <div class="col-md-6">
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <th>Price:</th>
+                        <td>@($"R{Model.Price:N0}")</td>
+                    </tr>
+                    <tr>
+                        <th>Location:</th>
+                        <td>@Model.Location</td>
+                    </tr>
+                    <tr>
+                        <th>Size:</th>
+                        <td>@Model.Size</td>
+                    </tr>
+                    <tr>
+                        <th>Status:</th>
+                        <td>@Model.Status</td>
+                    </tr>
+                    <tr>
+                        <th>Units:</th>
+                        <td>@Model.Units</td>
+                    </tr>
+                    <tr>
+                        <th>Occupancy:</th>
+                        <td>@Model.Occupancy%</td>
+                    </tr>
+                    <tr>
+                        <th>Description:</th>
+                        <td>@(!string.IsNullOrWhiteSpace(Model.Description) ? Model.Description : "No description")</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a asp-action="Index" class="btn btn-sm btn-outline-secondary mt-3">Back to List</a>
+        </div>
+    </div>
+
+    @if (Model.ImageUrls != null && Model.ImageUrls.Count > 1)
+    {
+        <div class="mt-4">
+            <h5>Other Images:</h5>
+            <div class="d-flex flex-wrap gap-2">
+                @foreach (var img in Model.ImageUrls.Skip(1))
+                {
+                    <img src="@img" alt="Property Image" style="width:150px; height:100px; object-fit:cover; border-radius:5px;" />
+                }
+            </div>
+        </div>
+    }
+</div>

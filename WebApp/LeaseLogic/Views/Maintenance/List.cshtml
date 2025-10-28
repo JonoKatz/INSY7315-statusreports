@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Maintenance Dashboard";
+}
+
+<div class="container mt-4">
+    <h2 style="color:#142943;">Maintenance Requests</h2>
+
+    <ul class="nav nav-tabs mb-3">
+        <li class="nav-item"><a class="nav-link active" href="#">All</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pending</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">In Progress</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Resolved</a></li>
+    </ul>
+
+    <table class="table table-bordered shadow">
+        <thead style="background-color:#2572ad; color:#ffffff;">
+            <tr>
+                <th>Issue</th>
+                <th>Property</th>
+                <th>Tenant</th>
+                <th>Assigned</th>
+                <th>Status</th>
+                <th>Date Reported</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Leaking Tap</td>
+                <td>Blue Hills A12</td>
+                <td>John D</td>
+                <td>Peter (Caretaker)</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td>2025-08-22</td>
+            </tr>
+            <tr>
+                <td>Power outage</td>
+                <td>Birchleigh B5</td>
+                <td>Mary S</td>
+                <td>James (Caretaker)</td>
+                <td><span class="badge badge-info">In Progress</span></td>
+                <td>2025-08-20</td>
+            </tr>
+            <tr>
+                <td>Broken Window</td>
+                <td>Florida C3</td>
+                <td>Alex P</td>
+                <td>Peter (Caretaker)</td>
+                <td><span class="badge badge-success">Resolved</span></td>
+                <td>2025-08-15</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

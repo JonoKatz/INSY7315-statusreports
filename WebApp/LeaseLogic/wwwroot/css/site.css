@@ -1,0 +1,48 @@
+
+body {
+    background-color: #ffffff !important; 
+}
+
+.navbar-custom {
+    background-color: #2572ad !important; 
+}
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+        color: #ffffff !important;
+    }
+
+        .navbar-custom .nav-link:hover {
+            color: #d9e9f5 !important; 
+        }
+
+
+body, table, th, td, .badge, select, input, button {
+    font-family: Arial, sans-serif !important;
+}
+
+.view-btn {
+    color: #4e9638;
+    border-color: #4e9638;
+    background-color: white;
+    transition: 0.2s;
+}
+
+    .view-btn:hover {
+        color: white;
+        background-color: #4e9638;
+        border-color: #4e9638;
+    }
+
+.edit-btn {
+    color: #2572ad;
+    border-color: #2572ad;
+    background-color: white;
+    transition: 0.2s;
+}
+
+    .edit-btn:hover {
+        color: white;
+        background-color: #2572ad;
+        border-color: #2572ad;
+    }
