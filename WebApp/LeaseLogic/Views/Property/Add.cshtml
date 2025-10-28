@@ -6,7 +6,9 @@
 <div class="container mt-5" style="max-width: 700px; font-family: Arial, sans-serif;">
     <h2 class="mb-4" style="color:#142943;">Add New Property</h2>
 
-    <form asp-action="Add" method="post">
+    <form asp-action="Add" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
         <div class="mb-3">
             <label asp-for="Name" class="form-label">Property Name</label>
             <input asp-for="Name" class="form-control" placeholder="Enter property name" required />
@@ -14,17 +16,8 @@
 
         <div class="mb-3">
             <label asp-for="Price" class="form-label">Price (R)</label>
-            <input asp-for="Price" type="number" step="0.01" class="form-control" placeholder="Enter property price" required />
-        </div>
-
-        <div class="mb-3">
-            <label asp-for="Units" class="form-label">Units</label>
-            <input asp-for="Units" type="number" min="1" class="form-control" placeholder="Enter number of units" required />
-        </div>
-
-        <div class="mb-3">
-            <label asp-for="Occupancy" class="form-label">Occupancy (%)</label>
-            <input asp-for="Occupancy" type="number" step="0.01" min="0" max="100" class="form-control" placeholder="Enter occupancy %" required />
+            <input asp-for="Price" type="number" step="0.01" class="form-control" placeholder="Enter property price" />
+            <small class="text-muted">Price is only used when the property is occupied.</small>
         </div>
 
         <div class="mb-3">
@@ -38,13 +31,14 @@
         </div>
 
         <div class="mb-3">
-            <label asp-for="Description" class="form-label">Description (optional)</label>
-            <textarea asp-for="Description" class="form-control" rows="3" placeholder="Enter property description (optional)"></textarea>
+            <label asp-for="Description" class="form-label">Description</label>
+            <textarea asp-for="Description" class="form-control" rows="3" placeholder="Enter property description" required></textarea>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Image URLs (optional, comma-separated)</label>
-            <input name="imageUrlsInput" class="form-control" placeholder="https://example.com/img1.jpg, https://example.com/img2.jpg" />
+            <label class="form-label">Upload Images</label>
+            <input type="file" name="imageFiles" multiple class="form-control" />
+            <small class="text-muted">Select one or more images (any size).</small>
         </div>
 
         <div class="mb-3">

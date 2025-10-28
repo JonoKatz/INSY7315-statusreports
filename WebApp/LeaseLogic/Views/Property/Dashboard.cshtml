@@ -1,34 +1,130 @@
-﻿@{
-    ViewData["Title"] = "Admin Dashboard";
+﻿@using LeaseLogic.Models
+@inject LeaseLogic.Services.FirebaseService FirebaseService
+@{
+    ViewData["Title"] = "Landlord Dashboard";
+
+    // Fetch data
+    var properties = await FirebaseService.GetPropertiesAsync();
+    var maintenanceRequests = await FirebaseService.GetMaintenanceRequestsAsync();
+
+    var totalProperties = properties.Count;
+    var occupiedProperties = properties.Count(p => p.Status == "Occupied");
+    var totalRent = properties.Sum(p => p.Price);
+    var pendingMaintenance = maintenanceRequests.Count(r => r.Status == "Pending");
 }
 
 <div class="container mt-4" style="font-family: Arial, sans-serif;">
-    <h2 style="color:#142943;">Dashboard Overview</h2>
+    <h2 style="color:#142943;">Dashboard</h2>
 
+    <!-- Summary Cards -->
     <div class="row mt-3">
-        <div class="col-md-3">
-            <div class="card shadow p-3 text-center">
-                <h5 style="color:#2572ad;">Occupancy</h5>
-                <p>@ViewBag.OccupancyPercentage %</p>
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-primary shadow-sm">
+                <div class="card-body text-center">
+                    <h6>Total Properties</h6>
+                    <h3>@totalProperties</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card shadow p-3 text-center">
-                <h5 style="color:#2572ad;">Total Rent</h5>
-                <p>@($"R{ViewBag.TotalRent:N0}")</p>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-success shadow-sm">
+                <div class="card-body text-center">
+                    <h6>Occupied Properties</h6>
+                    <h3>@occupiedProperties</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card shadow p-3 text-center">
-                <h5 style="color:#2572ad;">Maintenance</h5>
-                <p>—</p>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-info shadow-sm">
+                <div class="card-body text-center">
+                    <h6>Total Rent</h6>
+                    <h3>@($"R{ViewData["TotalRent"]:N0}")</h3>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card shadow p-3 text-center">
-                <h5 style="color:#2572ad;">Lease Expiry</h5>
-                <p>—</p>
+
+        <div class="col-md-3 mb-3">
+            <div class="card text-white bg-warning shadow-sm">
+                <div class="card-body text-center">
+                    <h6>Pending Maintenance</h6>
+                    <h3>@pendingMaintenance</h3>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Quick Action Buttons -->
+    <div class="row mt-4">
+        <div class="col-md-3 mb-3">
+            <a asp-controller="Property" asp-action="Index" class="btn btn-primary w-100 p-4">
+                Manage Properties
+            </a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a asp-controller="Tenant" asp-action="List" class="btn btn-success w-100 p-4">
+                Manage Tenants
+            </a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a asp-controller="Maintenance" asp-action="List" class="btn btn-warning w-100 p-4">
+                Maintenance
+            </a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a asp-controller="Reports" asp-action="Index" class="btn btn-info w-100 p-4">
+                Reports
+            </a>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="mt-5">
+        <h4>Property Overview</h4>
+        <canvas id="chartOccupancy" height="200"></canvas>
+
+        <h4 class="mt-5">Income Trend</h4>
+        <canvas id="chartIncome" height="200"></canvas>
+    </div>
 </div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Occupancy Pie Chart
+        var ctx1 = document.getElementById('chartOccupancy').getContext('2d');
+        new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: ['Occupied', 'Vacant'],
+                datasets: [{
+                    data: [@occupiedProperties, @totalProperties - @occupiedProperties],
+                    backgroundColor: ['#28a745', '#6c757d']
+                }]
+            }
+        });
+
+        // Income Line Chart
+        var ctx2 = document.getElementById('chartIncome').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: [@string.Join(",", Enumerable.Range(1, 12))], // Months 1-12
+                datasets: [{
+                    label: 'Monthly Income',
+                    data: [@string.Join(",", Enumerable.Range(1, 12).Select(m => properties.Where(p => true /* add logic if you have per month */).Sum(p => p.Price)))],
+                    borderColor: '#007bff',
+                    backgroundColor: 'rgba(0,123,255,0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true }
+                }
+            }
+        });
+    </script>
+}

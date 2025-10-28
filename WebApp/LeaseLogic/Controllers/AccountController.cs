@@ -11,9 +11,6 @@ namespace LeaseLogic.Controllers
         private readonly FirebaseService _firebaseService = new FirebaseService();
         private readonly FirebaseAuthService _authService = new FirebaseAuthService();
 
-        // =========================
-        // REGISTER
-        // =========================
         [HttpGet]
         public IActionResult Register() => View();
 
@@ -28,23 +25,14 @@ namespace LeaseLogic.Controllers
             }
 
             email = email.Trim().ToLower();
-
-            // Create user in Firebase Auth
             var idToken = await _authService.SignUpWithEmailPasswordAsync(email, password);
             if (idToken == null)
             {
-                ViewBag.Error = "Registration failed: email may already exist or password is too weak";
+                ViewBag.Error = "Registration failed";
                 return View();
             }
 
-            // Save user to Firestore
-            var userModel = new UserModel
-            {
-                email = email,
-                name = name,
-                role = role
-            };
-
+            var userModel = new UserModel { email = email, name = name, role = role };
             var created = await _firebaseService.CreateUserAsync(userModel);
             if (!created)
             {
@@ -52,7 +40,6 @@ namespace LeaseLogic.Controllers
                 return View();
             }
 
-            // Auto-login
             HttpContext.Session.SetString("UserEmail", userModel.email);
             HttpContext.Session.SetString("UserName", userModel.name);
             HttpContext.Session.SetString("FirebaseIdToken", idToken);
@@ -60,9 +47,6 @@ namespace LeaseLogic.Controllers
             return RedirectToAction("Index", "Dashboard");
         }
 
-        // =========================
-        // LOGIN
-        // =========================
         [HttpGet]
         public IActionResult Login() => View();
 
@@ -76,8 +60,6 @@ namespace LeaseLogic.Controllers
             }
 
             email = email.Trim().ToLower();
-
-            // Authenticate with Firebase Auth
             var idToken = await _authService.SignInWithEmailPasswordAsync(email, password);
             if (idToken == null)
             {
@@ -85,7 +67,6 @@ namespace LeaseLogic.Controllers
                 return View();
             }
 
-            // Fetch user metadata from Firestore
             var user = await _firebaseService.GetUserByEmailAsync(email);
             if (user == null)
             {
@@ -93,7 +74,6 @@ namespace LeaseLogic.Controllers
                 return View();
             }
 
-            // Set session
             HttpContext.Session.SetString("UserEmail", user.email);
             HttpContext.Session.SetString("UserName", user.name);
             HttpContext.Session.SetString("FirebaseIdToken", idToken);
@@ -101,9 +81,6 @@ namespace LeaseLogic.Controllers
             return RedirectToAction("Dashboard", "Property");
         }
 
-        // =========================
-        // LOGOUT
-        // =========================
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();

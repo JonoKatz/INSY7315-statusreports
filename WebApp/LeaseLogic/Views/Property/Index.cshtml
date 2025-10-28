@@ -24,9 +24,11 @@
             {
                 <tr>
                     <td class="text-center" style="width: 100px;">
-                        @if (property.ImageUrls != null && property.ImageUrls.Any())
+                        @if (property.Images != null && property.Images.Any())
                         {
-                            <img src="@property.ImageUrls.First()" alt="Property Image"
+                            var firstImageBase64 = Convert.ToBase64String(property.Images.First());
+                            <img src="data:image/png;base64,@firstImageBase64"
+                                 alt="Property Image"
                                  style="width:70px; height:70px; object-fit:cover; border-radius:8px;" />
                         }
                         else
@@ -37,7 +39,7 @@
                     <td>@property.Name</td>
                     <td>@($"R{property.Price:N0}")</td>
                     <td>@property.Location</td>
-                    <td> @property.Status</td>
+                    <td>@property.Status</td>
                     <td class="text-center">
                         <a asp-action="View" asp-route-id="@property.Id"
                            class="btn btn-sm btn-outline-success view-btn">
@@ -56,9 +58,8 @@
                             </button>
                         </form>
                     </td>
-
                 </tr>
-                        }
+            }
         </tbody>
     </table>
 </div>

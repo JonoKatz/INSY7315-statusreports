@@ -3,7 +3,6 @@ C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\appsett
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\LeaseLogic.staticwebassets.runtime.json
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\LeaseLogic.staticwebassets.endpoints.json
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\LeaseLogic.exe
-C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\serviceAccountKey.json
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\LeaseLogic.deps.json
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\LeaseLogic.runtimeconfig.json
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\LeaseLogic.dll
@@ -121,3 +120,4 @@ C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\obj\Debug\net9.0\LeaseLo
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\obj\Debug\net9.0\LeaseLogic.genruntimeconfig.cache
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\obj\Debug\net9.0\ref\LeaseLogic.dll
 C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\obj\Debug\net9.0\compressed\n4omwo5xt3-p1tff0jugi.gz
+C:\Year 3\Semester 2\INSY7315 (WIL)\programs\LeaseLogic\bin\Debug\net9.0\serviceAccountKey.json

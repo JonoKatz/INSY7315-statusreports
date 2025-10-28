@@ -1,54 +1,84 @@
-﻿@{
-    ViewData["Title"] = "Maintenance Dashboard";
+﻿@model List<LeaseLogic.Models.MaintenanceRequestModel>
+@{
+    ViewData["Title"] = "Maintenance Requests";
+
+    // Safely read the status query parameter
+    var statusFilter = Context.Request.Query["status"].ToString();
 }
 
 <div class="container mt-4">
     <h2 style="color:#142943;">Maintenance Requests</h2>
 
     <ul class="nav nav-tabs mb-3">
-        <li class="nav-item"><a class="nav-link active" href="#">All</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Pending</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">In Progress</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Resolved</a></li>
+        <li class="nav-item">
+            <a class="nav-link @(string.IsNullOrEmpty(statusFilter) ? "active" : "")"
+               asp-action="List">All</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(statusFilter == "Pending" ? "active" : "")"
+               asp-action="List" asp-route-status="Pending">Pending</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(statusFilter == "In Progress" ? "active" : "")"
+               asp-action="List" asp-route-status="In Progress">In Progress</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(statusFilter == "Completed" ? "active" : "")"
+               asp-action="List" asp-route-status="Completed">Completed</a>
+        </li>
     </ul>
 
     <table class="table table-bordered shadow">
         <thead style="background-color:#2572ad; color:#ffffff;">
             <tr>
-                <th>Issue</th>
+                <th>Description</th>
                 <th>Property</th>
                 <th>Tenant</th>
-                <th>Assigned</th>
                 <th>Status</th>
                 <th>Date Reported</th>
+                <th>Date Fixed</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Leaking Tap</td>
-                <td>Blue Hills A12</td>
-                <td>John D</td>
-                <td>Peter (Caretaker)</td>
-                <td><span class="badge badge-warning">Pending</span></td>
-                <td>2025-08-22</td>
+            @foreach (var request in Model)
+            {
+                <tr>
+                    <td>@request.Description</td>
+                    <td>@request.PropertyName</td>
+                    <td>@request.TenantName</td>
+                    <td>
+                        @switch (request.Status)
+                        {
+                            case "Pending":
+                                <span class="badge bg-warning">Pending</span>
+                                ;
+                                break;
+                            case "In Progress":
+                                <span class="badge bg-info">In Progress</span>
+                                ;
+                                break;
+                            case "Completed":
+                                <span class="badge bg-success">Completed</span>
+                                ;
+                                break;
+                            default:
+                                <span class="badge bg-secondary">@request.Status</span>
+                                ;
+                                break;
+                        }
+                </td>
+                <td>
+                    @DateTimeOffset.FromUnixTimeMilliseconds(request.Timestamp)
+                    .ToLocalTime().ToString("yyyy-MM-dd")
+                </td>
+                <td>
+                    @(request.DateFixed.HasValue
+                                        ? DateTimeOffset.FromUnixTimeMilliseconds(request.DateFixed.Value)
+                                        .ToLocalTime().ToString("yyyy-MM-dd")
+                                        : "-")
+                </td>
             </tr>
-            <tr>
-                <td>Power outage</td>
-                <td>Birchleigh B5</td>
-                <td>Mary S</td>
-                <td>James (Caretaker)</td>
-                <td><span class="badge badge-info">In Progress</span></td>
-                <td>2025-08-20</td>
-            </tr>
-            <tr>
-                <td>Broken Window</td>
-                <td>Florida C3</td>
-                <td>Alex P</td>
-                <td>Peter (Caretaker)</td>
-                <td><span class="badge badge-success">Resolved</span></td>
-                <td>2025-08-15</td>
-            </tr>
+                        }
         </tbody>
     </table>
 </div>
-

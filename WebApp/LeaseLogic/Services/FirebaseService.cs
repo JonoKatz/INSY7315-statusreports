@@ -1,24 +1,19 @@
-﻿namespace LeaseLogic.Services
-{
-    using Google.Cloud.Firestore;
-    using LeaseLogic.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
+﻿using Google.Cloud.Firestore;
+using LeaseLogic.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
+namespace LeaseLogic.Services
+{
     public class FirebaseService
     {
         private readonly FirestoreDb _db;
 
         public FirebaseService()
         {
-            string path = Path.Combine(AppContext.BaseDirectory, "serviceAccountKey.json");
-            _db = new FirestoreDbBuilder
-            {
-                ProjectId = "leaselogic-e0fd5",
-                Credential = Google.Apis.Auth.OAuth2.GoogleCredential.FromFile(path)
-            }.Build();
+            _db = FirebaseConnector.GetFirestoreDb();
         }
 
         // ---------------- Users ----------------
@@ -51,12 +46,26 @@
         }
 
         // ---------------- Properties ----------------
-        public async Task<bool> AddPropertyAsync(PropertyModel property)
+        public async Task<bool> AddPropertyAsync(PropertyModel property, List<IFormFile>? imageFiles = null)
         {
             try
             {
-                if (string.IsNullOrEmpty(property.Id)) property.Id = Guid.NewGuid().ToString();
+                if (string.IsNullOrEmpty(property.Id))
+                    property.Id = Guid.NewGuid().ToString();
+
                 property.DateCreated = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+                // Convert uploaded images to byte arrays
+                if (imageFiles != null)
+                {
+                    property.Images.Clear();
+                    foreach (var file in imageFiles)
+                    {
+                        using var ms = new MemoryStream();
+                        await file.CopyToAsync(ms);
+                        property.Images.Add(ms.ToArray());
+                    }
+                }
 
                 var docRef = _db.Collection("properties").Document(property.Id);
                 await docRef.SetAsync(property);
@@ -110,7 +119,6 @@
 
                 if (softDelete)
                 {
-                    // Mark as deleted instead of actually removing
                     await docRef.UpdateAsync(new Dictionary<string, object>
                     {
                         { "DeletedAt", DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() },
@@ -131,13 +139,31 @@
         }
 
         // ---------------- Maintenance ----------------
-        public async Task<List<MaintenanceRequestModel>> GetMaintenanceRequestsAsync()
+        // ---------------- Maintenance ----------------
+        public async Task<List<MaintenanceRequestModel>> GetMaintenanceRequestsAsync(
+            string? tenantId = null, bool? onlyCompleted = null)
         {
             var snapshot = await _db.Collection("maintenance").GetSnapshotAsync();
-            return snapshot.Documents
+            var list = snapshot.Documents
                 .Where(d => d.Exists)
                 .Select(d => d.ConvertTo<MaintenanceRequestModel>())
                 .ToList();
+
+            // Filter by tenant if provided
+            if (!string.IsNullOrEmpty(tenantId))
+                list = list.Where(r => r.TenantId == tenantId).ToList();
+
+            // Filter by completed status if requested
+            if (onlyCompleted.HasValue)
+            {
+                if (onlyCompleted.Value)
+                    list = list.Where(r => r.Status == "Completed").ToList();
+                else
+                    list = list.Where(r => r.Status == "Pending" || r.Status == "In Progress").ToList();
+            }
+
+            return list.OrderByDescending(r => r.Timestamp).ToList();
         }
+
     }
 }

@@ -49,7 +49,6 @@ namespace LeaseLogic.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                // 🔹 Log Firebase error for debugging
                 Console.WriteLine("Firebase SignUp failed: " + resultJson);
                 return null;
             }

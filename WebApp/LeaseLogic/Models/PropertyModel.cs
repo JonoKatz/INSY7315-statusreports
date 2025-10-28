@@ -12,14 +12,12 @@ namespace LeaseLogic.Models
         [FirestoreProperty] public double Price { get; set; } = 0.0;
         [FirestoreProperty] public string Size { get; set; } = "";
         [FirestoreProperty] public string Location { get; set; } = "";
-        [FirestoreProperty] public string? Description { get; set; } = "";
-        [FirestoreProperty] public string? ImageUrl { get; set; } = "";
-        [FirestoreProperty] public List<string> ImageUrls { get; set; } = new List<string>();
+        [FirestoreProperty] public string Description { get; set; } = "";
+        [FirestoreProperty] public List<byte[]> Images { get; set; } = new List<byte[]>();
+
         [FirestoreProperty] public string Status { get; set; } = "Available";
         [FirestoreProperty] public long? DeletedAt { get; set; } = null;
         [FirestoreProperty] public bool IsRented { get; set; } = false;
         [FirestoreProperty] public long DateCreated { get; set; } = System.DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-        [FirestoreProperty] public int Units { get; set; } = 0;
-        [FirestoreProperty] public double Occupancy { get; set; } = 0;
     }
 }

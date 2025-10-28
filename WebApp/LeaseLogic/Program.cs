@@ -1,6 +1,7 @@
-using FirebaseAdmin;
+﻿using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Firestore;
+using LeaseLogic.Services;
 
 namespace LeaseLogic
 {
@@ -12,6 +13,8 @@ namespace LeaseLogic
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddSingleton<FirebaseService>();
 
             // ? Add session services
             builder.Services.AddDistributedMemoryCache(); // required by session
