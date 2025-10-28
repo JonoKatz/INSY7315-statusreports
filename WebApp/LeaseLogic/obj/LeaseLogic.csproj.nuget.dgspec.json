@@ -62,6 +62,10 @@
             "Google.Cloud.Firestore": {
               "target": "Package",
               "version": "[3.11.0, )"
+            },
+            "Google.Cloud.Storage.V1": {
+              "target": "Package",
+              "version": "[4.13.0, )"
             }
           },
           "imports": [

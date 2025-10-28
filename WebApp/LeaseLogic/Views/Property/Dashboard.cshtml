@@ -40,7 +40,7 @@
             <div class="card text-white bg-info shadow-sm">
                 <div class="card-body text-center">
                     <h6>Total Rent</h6>
-                    <h3>@($"R{ViewData["TotalRent"]:N0}")</h3>
+                    <h3>@($"R{totalRent:N0}")</h3>
                 </div>
             </div>
         </div>
@@ -68,13 +68,13 @@
             </a>
         </div>
         <div class="col-md-3 mb-3">
-            <a asp-controller="Maintenance" asp-action="List" class="btn btn-warning w-100 p-4">
-                Maintenance
+            <a asp-controller="Reports" asp-action="Index" class="btn btn-info w-100 p-4">
+                Reports
             </a>
         </div>
         <div class="col-md-3 mb-3">
-            <a asp-controller="Reports" asp-action="Index" class="btn btn-info w-100 p-4">
-                Reports
+            <a asp-controller="Maintenance" asp-action="List" class="btn btn-warning w-100 p-4">
+                Maintenance
             </a>
         </div>
     </div>

@@ -10,9 +10,9 @@
     {
         <div class="mb-3">
             @{
-                var mainImageBase64 = Convert.ToBase64String(Model.Images.First());
+                var firstBase64 = Convert.ToBase64String(Model.Images.First());
             }
-            <img src="data:image/png;base64,@mainImageBase64" alt="Property Image"
+            <img src="data:image/png;base64,@firstBase64" alt="Property Image"
                  style="width:300px; height:200px; object-fit:cover; border-radius:8px;" />
         </div>
 
@@ -23,8 +23,8 @@
                 <div class="d-flex flex-wrap gap-2">
                     @foreach (var imgBytes in Model.Images.Skip(1))
                     {
-                        var imgBase64 = Convert.ToBase64String(imgBytes);
-                        <img src="data:image/png;base64,@imgBase64" alt="Property Image"
+                        var base64 = Convert.ToBase64String(imgBytes);
+                        <img src="data:image/png;base64,@base64" alt="Property Image"
                              style="width:150px; height:100px; object-fit:cover; border-radius:5px;" />
                     }
                 </div>

@@ -1,0 +1,20 @@
+# Visual Studio / .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Environment files / Firebase key
+.env
+serviceAccountKey.json
+
+# Node.js (if any)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+

@@ -3,45 +3,38 @@
     ViewData["Title"] = "Edit Property";
 }
 
-<div class="container mt-5" style="max-width: 700px; font-family: Arial, sans-serif;">
+<div class="container mt-5" style="max-width:700px;font-family:Arial,sans-serif;">
     <h2 class="mb-4" style="color:#142943;">Edit Property</h2>
 
     <form asp-action="Edit" method="post" enctype="multipart/form-data">
         @Html.AntiForgeryToken()
         <input type="hidden" asp-for="Id" />
 
+        <!-- Property fields -->
         <div class="mb-3">
             <label asp-for="Name" class="form-label">Property Name</label>
             <input asp-for="Name" class="form-control" required />
         </div>
-
         <div class="mb-3">
             <label asp-for="Price" class="form-label">Price (R)</label>
-            <input asp-for="Price" type="number" step="1" class="form-control" />
-            <small class="text-muted">Price is only used when the property is occupied.</small>
+            <input asp-for="Price" type="number" step="1" class="form-control" value="@Model.Price" />
         </div>
-
         <div class="mb-3">
             <label asp-for="Size" class="form-label">Size</label>
             <input asp-for="Size" class="form-control" required />
         </div>
-
         <div class="mb-3">
             <label asp-for="Location" class="form-label">Location</label>
             <input asp-for="Location" class="form-control" required />
         </div>
-
         <div class="mb-3">
             <label asp-for="Description" class="form-label">Description</label>
             <textarea asp-for="Description" class="form-control" rows="3" required></textarea>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label">Upload Images</label>
-            <input type="file" name="imageFiles" multiple class="form-control" />
-            <small class="text-muted">Select one or more images (any size). Previous images will remain unless replaced.</small>
-        </div>
+        
 
+        <!-- Status -->
         <div class="mb-3">
             <label asp-for="Status" class="form-label">Status</label>
             <select asp-for="Status" class="form-select">
@@ -55,3 +48,59 @@
         <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
     </form>
 </div>
+
+<script>
+        let filesArray = [];
+    const imageUpload = document.getElementById('imageUpload');
+    const newImagePreview = document.getElementById('newImagePreview');
+
+    function updatePreview() {
+        newImagePreview.innerHTML = '';
+        filesArray.forEach((file, index) => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const container = document.createElement('div');
+                container.style.position = 'relative';
+                container.style.width = '100px';
+                container.style.height = '100px';
+
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.style.borderRadius = '5px';
+                container.appendChild(img);
+
+                const delBtn = document.createElement('button');
+                delBtn.type = 'button';
+                delBtn.className = 'btn btn-danger btn-sm position-absolute top-0 end-0';
+                delBtn.style.fontSize = '12px';
+                delBtn.innerText = 'X';
+                delBtn.onclick = () => {
+                    filesArray.splice(index, 1);
+                    updateInputFiles();
+                    updatePreview();
+                };
+                container.appendChild(delBtn);
+
+                newImagePreview.appendChild(container);
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+
+    function updateInputFiles() {
+        const dt = new DataTransfer();
+        filesArray.forEach(f => dt.items.add(f));
+        imageUpload.files = dt.files;
+    }
+
+    imageUpload.addEventListener('change', function() {
+        Array.from(this.files).forEach(f => filesArray.push(f));
+        updateInputFiles();
+        updatePreview();
+        this.value = ''; // allow re-selection
+    });
+
+</script>

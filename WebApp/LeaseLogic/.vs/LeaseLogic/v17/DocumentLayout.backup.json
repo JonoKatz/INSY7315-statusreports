@@ -3,72 +3,72 @@
   "WorkspaceRootPath": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\tenant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\tenant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\property\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\property\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\controllers\\maintenancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:controllers\\maintenancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\maintenance\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\maintenance\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\models\\maintenancerequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:models\\maintenancerequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\property\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\property\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\property\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\property\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\models\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:models\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\property\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\property\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:services\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:controllers\\propertycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\property\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\property\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\property\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\property\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\property\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\property\\view.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\services\\firebaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:services\\firebaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\services\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:services\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\services\\firebaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:services\\firebaseconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\controllers\\maintenancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:controllers\\maintenancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\models\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:models\\propertymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\models\\maintenancerequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:models\\maintenancerequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\tenant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\tenant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\views\\maintenance\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|solutionrelative:views\\maintenance\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{279E691C-9CC5-4C2B-A9F7-412E7D329E4C}|LeaseLogic.csproj|c:\\year 3\\semester 2\\insy7315 (wil)\\programs\\leaselogic\\serviceaccountkey.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -114,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 20,
           "Children": [
             {
               "$type": "Bookmark",
@@ -149,8 +149,12 @@
               "Name": "ST:0:0:{1a46fd64-28d5-434c-8eb3-17a02d419b53}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Tenant\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Tenant\\Index.cshtml",
@@ -162,12 +166,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Maintenance\\List.cshtml",
               "RelativeDocumentMoniker": "Views\\Maintenance\\List.cshtml",
@@ -175,12 +175,11 @@
               "RelativeToolTip": "Views\\Maintenance\\List.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-28T12:06:57.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T12:06:57.462Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "MaintenanceRequestModel.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Models\\MaintenanceRequestModel.cs",
               "RelativeDocumentMoniker": "Models\\MaintenanceRequestModel.cs",
@@ -193,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "Models\\UserModel.cs",
@@ -206,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 8,
               "Title": "FirebaseConnector.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Services\\FirebaseConnector.cs",
               "RelativeDocumentMoniker": "Services\\FirebaseConnector.cs",
@@ -219,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -227,8 +226,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T10:28:12.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T10:28:12.58Z"
             },
             {
               "$type": "Document",
@@ -240,8 +238,7 @@
               "RelativeToolTip": "serviceAccountKey.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T10:24:03.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T10:24:03.634Z"
             },
             {
               "$type": "Document",
@@ -269,13 +266,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "View.cshtml",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\View.cshtml",
               "RelativeDocumentMoniker": "Views\\Property\\View.cshtml",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\View.cshtml",
               "RelativeToolTip": "Views\\Property\\View.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T12:55:10.561Z",
               "EditorCaption": ""
@@ -294,13 +291,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Property\\Dashboard.cshtml",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Dashboard.cshtml",
               "RelativeToolTip": "Views\\Property\\Dashboard.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAswEQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T12:08:20.91Z",
               "EditorCaption": ""
@@ -319,26 +316,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Property\\Edit.cshtml",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Edit.cshtml",
               "RelativeToolTip": "Views\\Property\\Edit.cshtml",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwDkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowCIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T11:51:17.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "MaintenanceController.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Controllers\\MaintenanceController.cs",
               "RelativeDocumentMoniker": "Controllers\\MaintenanceController.cs",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Controllers\\MaintenanceController.cs",
               "RelativeToolTip": "Controllers\\MaintenanceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBcAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T11:43:17.916Z",
               "EditorCaption": ""
@@ -381,65 +378,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Property\\Index.cshtml",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Index.cshtml",
               "RelativeToolTip": "Views\\Property\\Index.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAowEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T11:34:13.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Add.cshtml",
               "RelativeDocumentMoniker": "Views\\Property\\Add.cshtml",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Views\\Property\\Add.cshtml",
               "RelativeToolTip": "Views\\Property\\Add.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-24T11:29:03.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "PropertyController.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Controllers\\PropertyController.cs",
               "RelativeDocumentMoniker": "Controllers\\PropertyController.cs",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Controllers\\PropertyController.cs",
               "RelativeToolTip": "Controllers\\PropertyController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwHwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAFkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T11:27:14.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PropertyModel.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Models\\PropertyModel.cs",
               "RelativeDocumentMoniker": "Models\\PropertyModel.cs",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Models\\PropertyModel.cs",
               "RelativeToolTip": "Models\\PropertyModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBEAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T11:24:46.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwFcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAYwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T10:48:52.807Z",
               "EditorCaption": ""
@@ -458,26 +455,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "FirebaseService.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Services\\FirebaseService.cs",
               "RelativeDocumentMoniker": "Services\\FirebaseService.cs",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Services\\FirebaseService.cs",
               "RelativeToolTip": "Services\\FirebaseService.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAmwKYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAuwHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T10:48:35.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "FirebaseAuthService.cs",
               "DocumentMoniker": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Services\\FirebaseAuthService.cs",
               "RelativeDocumentMoniker": "Services\\FirebaseAuthService.cs",
               "ToolTip": "C:\\Year 3\\Semester 2\\INSY7315 (WIL)\\programs\\LeaseLogic\\Services\\FirebaseAuthService.cs",
               "RelativeToolTip": "Services\\FirebaseAuthService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwDwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T10:48:27.079Z",
               "EditorCaption": ""

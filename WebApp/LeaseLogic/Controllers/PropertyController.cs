@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,7 +16,6 @@ namespace LeaseLogic.Controllers
         // ---------------- PROPERTY LIST ----------------
         public async Task<IActionResult> Index()
         {
-            // Only fetch properties that are not soft-deleted
             var properties = await _firebaseService.GetPropertiesAsync(includeDeleted: false);
             return View(properties);
         }
@@ -39,8 +37,7 @@ namespace LeaseLogic.Controllers
             }
 
             property.Id = Guid.NewGuid().ToString();
-            property.IsRented = false; // default
-            property.Price = 0; // rent only when occupied
+            property.Price = 0;
 
             var success = await _firebaseService.AddPropertyAsync(property, imageFiles);
             if (!success)
@@ -62,29 +59,46 @@ namespace LeaseLogic.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(PropertyModel property, List<IFormFile>? imageFiles)
+        public async Task<IActionResult> Edit(PropertyModel property, List<IFormFile>? imageFiles, int[]? KeepImageIndexes)
         {
-            if (!ModelState.IsValid || string.IsNullOrWhiteSpace(property.Description))
-            {
-                ViewBag.Error = "Description is required";
-                return View(property);
-            }
+            var existingProperty = await _firebaseService.GetPropertyByIdAsync(property.Id);
+            if (existingProperty == null) return NotFound();
 
-            var success = await _firebaseService.UpdatePropertyAsync(property);
-            if (!success)
-            {
-                ViewBag.Error = "Failed to update property";
-                return View(property);
-            }
+            existingProperty.Name = property.Name;
+            existingProperty.Price = property.Price;
+            existingProperty.Size = property.Size;
+            existingProperty.Location = property.Location;
+            existingProperty.Description = property.Description;
+            existingProperty.Status = property.Status;
 
-            // Add new images if any
+            // Keep selected images
+            existingProperty.Images = KeepImageIndexes != null && KeepImageIndexes.Any()
+                ? KeepImageIndexes.Select(i => existingProperty.Images[i]).ToList()
+                : new List<byte[]>();
+
+            // Append new uploaded images
             if (imageFiles != null && imageFiles.Any())
             {
-                await _firebaseService.AddPropertyAsync(property, imageFiles);
+                if (existingProperty.Images == null) existingProperty.Images = new List<byte[]>();
+
+                foreach (var file in imageFiles)
+                {
+                    using var ms = new MemoryStream();
+                    await file.CopyToAsync(ms);
+                    existingProperty.Images.Add(ms.ToArray());
+                }
             }
+
+            await _firebaseService.UpdatePropertyAsync(existingProperty);
 
             return RedirectToAction("Index");
         }
+
+
+
+
+
+
 
         // ---------------- DELETE PROPERTY ----------------
         [HttpPost]
@@ -93,6 +107,23 @@ namespace LeaseLogic.Controllers
             await _firebaseService.DeletePropertyAsync(id, softDelete: true);
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteImage(string propertyId, int imageIndex)
+        {
+            var property = await _firebaseService.GetPropertyByIdAsync(propertyId);
+            if (property == null) return NotFound();
+
+            if (imageIndex >= 0 && imageIndex < property.Images.Count)
+            {   
+                property.Images.RemoveAt(imageIndex);
+                await _firebaseService.UpdatePropertyAsync(property);
+            }
+
+            return RedirectToAction("Edit", new { id = propertyId });
+        }
+
 
         // ---------------- VIEW PROPERTY ----------------
         [HttpGet]
@@ -108,17 +139,11 @@ namespace LeaseLogic.Controllers
         {
             var properties = await _firebaseService.GetPropertiesAsync(includeDeleted: false);
 
-            if (!properties.Any())
-            {
-                ViewBag.TotalRent = 0;
-            }
-            else
-            {
-                // Only sum rent for rented properties
-                ViewBag.TotalRent = properties.Where(p => p.IsRented).Sum(p => p.Price);
-            }
+            ViewBag.TotalRent = properties.Where(p => p.Status == "Occupied").Sum(p => p.Price);
 
             return View();
         }
+
+        
     }
 }
